@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <br>
+    <p>Primeiro número</p>
+    <input id="n1" type="number">
+    <br>
+    <p>Segundo número</p>
+    <input id="n2" type="number">
+    <br><br>
+   <button onclick="soma()">Soma</button>
+   <button onclick="subtracao()" > Subtração</button>
+   <button onclick="multiplicação()"> Multiplicar</button>
+   <button onclick="divisao()"> Divisão</button> <br> <br>
+   O resultado é <span id ="res"></span>
+   
+   <script>
+    var n1 = document.getElementById("n1")
+    var n2 = document.getElementById("n2")
+    var res = document.getElementById("res")
+
+function soma (){
+    res.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+}
+function subtracao (){
+    res.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+}
+
+function multiplicar (){
+    res.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+}
+
+function divisao (){
+    if(n2.value==0){
+        res.innerText = "não é possivel dividir por zero"
+    }
+
+    else {
+        res.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+    }
+}
+
+   </script>
+
+</body>
+</html>
